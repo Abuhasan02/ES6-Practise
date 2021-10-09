@@ -11,5 +11,11 @@ const myProfile = {
         return this.salary;
     }
 }
-myProfile.myName();
-console.log(myProfile.mySalary(350));
+const heroProfile = {
+    firstName: "Hero",
+    lastName: "Alam",
+    salary: 30000,
+}
+const heroChargeBill = myProfile.mySalary.bind(heroProfile);
+heroChargeBill(1000);
+console.log(heroProfile.salary);
